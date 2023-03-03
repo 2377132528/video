@@ -39,8 +39,10 @@
 		height: 100%;
 		font-size: 50px;
 		font-weight: 800;
-		text-align: center;
-		line-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		background: linear-gradient(270deg, #28e0b0, #c328e0, #28a1e0, #e0286b) center / cover;
 		background-size: 800% 800%;
 		-webkit-animation: AnimationName 30s ease infinite;
@@ -168,13 +170,19 @@
 	<button class="btn">点我点我！！</button>
 	<div class="box">
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-			<div class="mdl-card__title"><span>倩倩宝~我爱你呀~</span></div>
+			<div class="mdl-card__title">
+				<span>倩倩宝~我爱你呀~</span>
+				<video controls="controls" autoplay="autoplay">
+					<source src="./cxk.mp4" type="video/mp4" />
+				</video>
+			</div>
 		</div>
 	</div>
 </body>
 <script>
 	var btn = document.querySelector('.btn');
 	var box = document.querySelector('.box');
+	var video = document.querySelector('video');
 
 	btn.onclick = function() {
 		btn.style.animation = 'AnimationBTN 3s linear infinite';
@@ -182,6 +190,7 @@
 		setTimeout(function() {
 			box.style.display = 'block';
 			btn.style.display = 'none';
+			video.play();
 		}, 3000);
 	}
 </script>
