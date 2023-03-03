@@ -1,20 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>傻逼影视</title>
+	<title>倩宝宝~</title>
 </head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.box {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		display: none;
+	}
+
+	.demo-card-wide.mdl-card {
+		width: 100%;
+		height: 100%;
+	}
+
+	.demo-card-wide>.mdl-card__title {
+		color: #fff;
+		height: 100%;
+		font-size: 50px;
+		font-weight: 800;
+		text-align: center;
+		line-height: 100vh;
+		background: linear-gradient(270deg, #28e0b0, #c328e0, #28a1e0, #e0286b) center / cover;
+		background-size: 800% 800%;
+		-webkit-animation: AnimationName 30s ease infinite;
+		-moz-animation: AnimationName 30s ease infinite;
+		animation: AnimationName 30s ease infinite;
+	}
+
+	@-webkit-keyframes AnimationName {
+		0% {
+			background-position: 0% 50%
+		}
+
+		50% {
+			background-position: 100% 50%
+		}
+
+		100% {
+			background-position: 0% 50%
+		}
+	}
+
+	@-moz-keyframes AnimationName {
+		0% {
+			background-position: 0% 50%
+		}
+
+		50% {
+			background-position: 100% 50%
+		}
+
+		100% {
+			background-position: 0% 50%
+		}
+	}
+
+	@keyframes AnimationName {
+		0% {
+			background-position: 0% 50%
+		}
+
+		50% {
+			background-position: 100% 50%
+		}
+
+		100% {
+			background-position: 0% 50%
+		}
+	}
+
+	.btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100px;
+		height: 100px;
+		font-weight: 800;
+		border-radius: 50%;
+		background: linear-gradient(270deg, #28e0b0, #c328e0, #28a1e0, #e0286b) center / cover;
+		background-size: 800% 800%;
+		-webkit-animation: AnimationName 30s ease infinite;
+		-moz-animation: AnimationName 30s ease infinite;
+		animation: AnimationName 30s ease infinite;
+	}
+
+	@keyframes AnimationBTN {
+		0% {
+			width: 100px;
+			height: 100px;
+		}
+
+		10% {
+			width: 20vw;
+			height: 20vw;
+		}
+
+		20% {
+			width: 30vw;
+			height: 30vw;
+		}
+
+		30% {
+			width: 40vw;
+			height: 40vw;
+		}
+		
+		40% {
+			width: 50vw;
+			height: 50vw;
+		}
+
+		50% {
+			width: 60vw;
+			height: 60vw;
+		}
+
+		60% {
+			width: 70vw;
+			height: 70vw;
+		}
+
+		70% {
+			width: 80vw;
+			height: 80vw;
+		}
+
+		80% {
+			width: 90vw;
+			height: 90vw;
+		}
+
+		90% {
+			width: 100vw;
+			height: 100vw;
+		}
+
+		100% {
+			width: 100vw;
+			height: 100vw;
+		}
+	}
+</style>
+
 <body>
-	<button id="btn">点我播放假面骑士黑日第一集</button>
-	<iframe src="" frameborder="no" scrolling="no" allowfullscreen="true"></iframe>
+	<button class="btn">点我点我！！</button>
+	<div class="box">
+		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+			<div class="mdl-card__title"><span>倩倩宝~我爱你呀~</span></div>
+		</div>
+	</div>
 </body>
 <script>
-	var btn = document.getElementById('btn');
-	var iframe = document.querySelector('iframe');
-	btn.onclick = function(){
-		iframe.src = 'https://new.qqaku.com/share/gGt5PeaLbg8J7K57';
+	var btn = document.querySelector('.btn');
+	var box = document.querySelector('.box');
+
+	btn.onclick = function() {
+		btn.style.animation = 'AnimationBTN 3s linear infinite';
+		
+		setTimeout(function() {
+			box.style.display = 'block';
+			btn.style.display = 'none';
+		}, 3000);
 	}
 </script>
+
 </html>
